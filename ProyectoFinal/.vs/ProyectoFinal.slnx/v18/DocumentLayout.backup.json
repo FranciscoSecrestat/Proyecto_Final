@@ -1,0 +1,209 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|c:\\users\\secre\\onedrive\\desktop\\proyecto final\\proyectofinal\\proyectofinal\\controllers\\cryptocurrenciescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|solutionrelative:proyectofinal\\controllers\\cryptocurrenciescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|c:\\users\\secre\\onedrive\\desktop\\proyecto final\\proyectofinal\\proyectofinal\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|solutionrelative:proyectofinal\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQllocalDB/ProyectoFinal/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|c:\\users\\secre\\onedrive\\desktop\\proyecto final\\proyectofinal\\proyectofinal\\controllers\\portfoliocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|solutionrelative:proyectofinal\\controllers\\portfoliocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|c:\\users\\secre\\onedrive\\desktop\\proyecto final\\proyectofinal\\proyectofinal\\models\\cryptocurrency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|solutionrelative:proyectofinal\\models\\cryptocurrency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|c:\\users\\secre\\onedrive\\desktop\\proyecto final\\proyectofinal\\proyectofinal\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|solutionrelative:proyectofinal\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|c:\\users\\secre\\onedrive\\desktop\\proyecto final\\proyectofinal\\proyectofinal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|solutionrelative:proyectofinal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|c:\\users\\secre\\onedrive\\desktop\\proyecto final\\proyectofinal\\proyectofinal\\data\\migrations\\20260608215726_updatetransactionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|solutionrelative:proyectofinal\\data\\migrations\\20260608215726_updatetransactionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|c:\\users\\secre\\onedrive\\desktop\\proyecto final\\proyectofinal\\proyectofinal\\services\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|solutionrelative:proyectofinal\\services\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|c:\\users\\secre\\onedrive\\desktop\\proyecto final\\proyectofinal\\proyectofinal\\services\\itransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|solutionrelative:proyectofinal\\services\\itransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|c:\\users\\secre\\onedrive\\desktop\\proyecto final\\proyectofinal\\proyectofinal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|solutionrelative:proyectofinal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|c:\\users\\secre\\onedrive\\desktop\\proyecto final\\proyectofinal\\proyectofinal\\services\\criptoyaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B755CCD0-8810-1FA7-038C-BEB3D7BF3A14}|ProyectoFinal\\ProyectoFinal.csproj|solutionrelative:proyectofinal\\services\\criptoyaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\appsettings.json",
+              "RelativeDocumentMoniker": "ProyectoFinal\\appsettings.json",
+              "ToolTip": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\appsettings.json",
+              "RelativeToolTip": "ProyectoFinal\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-08T23:20:17.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dbo.Users.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQllocalDB/ProyectoFinal/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQllocalDB/ProyectoFinal/True/SqlTable/dbo.Users.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-06-08T23:21:14.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CryptoCurrenciesController.cs",
+              "DocumentMoniker": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Controllers\\CryptoCurrenciesController.cs",
+              "RelativeDocumentMoniker": "ProyectoFinal\\Controllers\\CryptoCurrenciesController.cs",
+              "ToolTip": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Controllers\\CryptoCurrenciesController.cs",
+              "RelativeToolTip": "ProyectoFinal\\Controllers\\CryptoCurrenciesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T23:09:37.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PortfolioController.cs",
+              "DocumentMoniker": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Controllers\\PortfolioController.cs",
+              "RelativeDocumentMoniker": "ProyectoFinal\\Controllers\\PortfolioController.cs",
+              "ToolTip": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Controllers\\PortfolioController.cs",
+              "RelativeToolTip": "ProyectoFinal\\Controllers\\PortfolioController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T23:08:30.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20260608215726_UpdateTransactionModel.cs",
+              "DocumentMoniker": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Data\\Migrations\\20260608215726_UpdateTransactionModel.cs",
+              "RelativeDocumentMoniker": "ProyectoFinal\\Data\\Migrations\\20260608215726_UpdateTransactionModel.cs",
+              "ToolTip": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Data\\Migrations\\20260608215726_UpdateTransactionModel.cs",
+              "RelativeToolTip": "ProyectoFinal\\Data\\Migrations\\20260608215726_UpdateTransactionModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T21:57:26.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "ProyectoFinal\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "ProyectoFinal\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T21:55:39.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TransactionsController.cs",
+              "DocumentMoniker": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Controllers\\TransactionsController.cs",
+              "RelativeDocumentMoniker": "ProyectoFinal\\Controllers\\TransactionsController.cs",
+              "ToolTip": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Controllers\\TransactionsController.cs",
+              "RelativeToolTip": "ProyectoFinal\\Controllers\\TransactionsController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAwEoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T21:55:08.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CryptoCurrency.cs",
+              "DocumentMoniker": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Models\\CryptoCurrency.cs",
+              "RelativeDocumentMoniker": "ProyectoFinal\\Models\\CryptoCurrency.cs",
+              "ToolTip": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Models\\CryptoCurrency.cs",
+              "RelativeToolTip": "ProyectoFinal\\Models\\CryptoCurrency.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA8wA4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T21:53:02.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TransactionService.cs",
+              "DocumentMoniker": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Services\\TransactionService.cs",
+              "RelativeDocumentMoniker": "ProyectoFinal\\Services\\TransactionService.cs",
+              "ToolTip": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Services\\TransactionService.cs",
+              "RelativeToolTip": "ProyectoFinal\\Services\\TransactionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T16:58:57.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ITransactionService.cs",
+              "DocumentMoniker": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Services\\ITransactionService.cs",
+              "RelativeDocumentMoniker": "ProyectoFinal\\Services\\ITransactionService.cs",
+              "ToolTip": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Services\\ITransactionService.cs",
+              "RelativeToolTip": "ProyectoFinal\\Services\\ITransactionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T16:54:11.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Program.cs",
+              "RelativeDocumentMoniker": "ProyectoFinal\\Program.cs",
+              "ToolTip": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Program.cs",
+              "RelativeToolTip": "ProyectoFinal\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T16:45:48.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CriptoYaService.cs",
+              "DocumentMoniker": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Services\\CriptoYaService.cs",
+              "RelativeDocumentMoniker": "ProyectoFinal\\Services\\CriptoYaService.cs",
+              "ToolTip": "C:\\Users\\secre\\OneDrive\\Desktop\\Proyecto final\\ProyectoFinal\\ProyectoFinal\\Services\\CriptoYaService.cs",
+              "RelativeToolTip": "ProyectoFinal\\Services\\CriptoYaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T16:45:29.474Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
