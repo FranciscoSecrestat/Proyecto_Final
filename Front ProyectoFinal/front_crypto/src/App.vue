@@ -20,14 +20,15 @@
             <router-link to="/portfolio" class="nav-link">Mi Cartera</router-link>
           </li>
           <li class="nav-item" v-if="isAuthenticated">
+            <router-link to="/deposit" class="nav-link">Cargar Saldo</router-link>
+          </li>
+          <li class="nav-item" v-if="isAuthenticated">
             <span class="nav-link user-name">{{ userName }}</span>
           </li>
           <li class="nav-item" v-if="isAuthenticated">
             <button @click="logout" class="nav-link logout-btn">Cerrar Sesión</button>
           </li>
-          <li class="nav-item" v-if="isAuthenticated">
-            <router-link to="/deposit" class="nav-link">Cargar Saldo</router-link>
-          </li>
+          
         </ul>
         <div class="hamburger" @click="mobileMenuOpen = !mobileMenuOpen">
           <span></span>
@@ -53,22 +54,31 @@ import { isAuthenticated, getUser, logout as logoutService } from '@/services/au
 export default {
   data() {
     return {
-      mobileMenuOpen: false
+      mobileMenuOpen: false,
+      authenticated: isAuthenticated(),
+      currentUser: getUser()
     };
   },
   computed: {
     isAuthenticated() {
-      return isAuthenticated();
+      return this.authenticated;
     },
     userName() {
-      const user = getUser();
-      return user ? user.name : '';
+      return this.currentUser ? this.currentUser.name : '';
     }
   },
   methods: {
     logout() {
       logoutService();
+      this.authenticated = false;
+      this.currentUser = null;
       this.$router.push('/login');
+    }
+  },
+  watch: {
+    $route() {
+      this.authenticated = isAuthenticated();
+      this.currentUser = getUser();
     }
   }
 };

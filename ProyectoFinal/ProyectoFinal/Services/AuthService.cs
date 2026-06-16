@@ -3,6 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using ProyectoFinal.Data;
 using ProyectoFinal.Models;
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -106,7 +107,8 @@ namespace ProyectoFinal.Services
                 {
                     Id = user.Id,
                     Email = user.Email,
-                    Name = user.Name
+                    Name = user.Name,
+                    Role = user.Role
                 },
                 Token = token
             };
@@ -182,7 +184,8 @@ namespace ProyectoFinal.Services
              
                     new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.NameIdentifier, user.Id.ToString()),
                     new System.Security.Claims.Claim("email", user.Email),
-                    new System.Security.Claims.Claim("name", user.Name)
+                    new System.Security.Claims.Claim("name", user.Name),
+                    new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.Role, user.Role)
                 },
                 expires: DateTime.UtcNow.AddHours(24),
                 signingCredentials: credentials

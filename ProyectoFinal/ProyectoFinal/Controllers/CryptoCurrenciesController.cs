@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProyectoFinal.Models;
 using ProyectoFinal.Services;
@@ -33,6 +34,7 @@ namespace ProyectoFinal.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public async Task<ActionResult<CryptoCurrency>> Create([FromBody] CryptoCurrency cryptocurrency)
         {
             cryptocurrency.LastUpdated = DateTime.Now;
@@ -41,6 +43,7 @@ namespace ProyectoFinal.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Update(int id, [FromBody] CryptoCurrency cryptocurrency)
         {
             var result = await _service.UpdateAsync(id, cryptocurrency);
@@ -50,12 +53,47 @@ namespace ProyectoFinal.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Delete(int id)
         {
             var result = await _service.DeleteAsync(id);
             if (!result)
                 return NotFound();
             return NoContent();
+        }
+
+        [HttpGet("prices")]
+        public async Task<IActionResult> GetPrices([FromServices] CriptoYaService criptoYaService)
+        {
+            var cryptos = await _service.GetAllAsync();
+            var result = new List<object>();
+
+            foreach (var crypto in cryptos)
+            {
+                try
+                {
+                    var price = await criptoYaService.GetPriceAsync(crypto.Code, "purchase");
+                    result.Add(new
+                    {
+                        crypto.Id,
+                        crypto.Name,
+                        crypto.Code,
+                        CurrentPrice = price
+                    });
+                }
+                catch
+                {
+                    result.Add(new
+                    {
+                        crypto.Id,
+                        crypto.Name,
+                        crypto.Code,
+                        CurrentPrice = 0
+                    });
+                }
+            }
+
+            return Ok(result);
         }
     }
 }

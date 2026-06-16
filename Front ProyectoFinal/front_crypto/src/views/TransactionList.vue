@@ -37,8 +37,8 @@
           <td>$ {{ t.money?.toLocaleString('es-AR') }}</td>
           <td class="actions">
             <button @click="$router.push(`/transactions/${t.id}`)" class="btn-view">Ver</button>
-            <button @click="$router.push(`/transactions/edit/${t.id}`)" class="btn-edit">Editar</button>
-            <button @click="confirmDelete(t.id)" class="btn-delete">Borrar</button>
+            <button  v-if="isAdmin" @click="$router.push(`/transactions/edit/${t.id}`)" class="btn-edit">Editar</button>
+            <button v-if="isAdmin" @click="confirmDelete(t.id)" class="btn-delete">Borrar</button>
           </td>
         </tr>
       </tbody>
@@ -59,6 +59,7 @@
 
 <script>
 import { getUserTransactions, deleteTransaction } from '@/services/transactionService';
+import { isAdmin } from '@/services/authService';
 
 export default {
   data() {
@@ -66,7 +67,8 @@ export default {
       transactions: [],
       loading: true,
       showModal: false,
-      deleteId: null
+      deleteId: null,
+      isAdmin: isAdmin()
     };
   },
   async mounted() {

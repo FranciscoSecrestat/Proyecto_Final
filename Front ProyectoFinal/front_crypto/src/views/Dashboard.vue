@@ -83,7 +83,7 @@
 </template>
 
 <script>
-import { getCryptoCurrencies, getUserTransactions } from '@/services/api';
+import { getCryptoPrices, getUserTransactions } from '@/services/api';
 import { getUser } from '@/services/authService';
 import axios from 'axios';
 
@@ -110,7 +110,7 @@ export default {
     async loadData() {
       this.loading = true;
       try {
-        this.cryptos = await getCryptoCurrencies();
+        this.cryptos = await getCryptoPrices();
         if (this.user) {
           this.transactions = await getUserTransactions(this.user.id);
 

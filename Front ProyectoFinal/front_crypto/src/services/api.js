@@ -124,3 +124,8 @@ export async function deleteTransaction(id) {
     throw error;
   }
 }
+
+export async function getCryptoPrices() {
+  const response = await axios.get('https://localhost:7192/api/cryptocurrencies/prices');
+  return response.data;
+}

@@ -37,3 +37,11 @@ export function getUser() {
   const user = localStorage.getItem('user');
   return user ? JSON.parse(user) : null;
 }
+export function getUserRole() {
+  const user = getUser();
+  return user ? user.role : null;
+}
+
+export function isAdmin() {
+  return getUserRole() === 'admin';
+}

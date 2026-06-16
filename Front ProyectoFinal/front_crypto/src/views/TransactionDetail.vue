@@ -27,7 +27,7 @@
       </div>
 
       <div class="buttons">
-        <button @click="$router.push(`/transactions/edit/${transaction.id}`)" class="btn-edit">
+        <button  v-if="isAdmin" @click="$router.push(`/transactions/edit/${transaction.id}`)" class="btn-edit">
           Editar
         </button>
         <button @click="$router.push('/transactions')" class="btn-back">
