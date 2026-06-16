@@ -1,9 +1,10 @@
-﻿using System.IdentityModel.Tokens.Jwt;
-using System.Security.Cryptography;
-using System.Text;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using ProyectoFinal.Data;
 using ProyectoFinal.Models;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace ProyectoFinal.Services
 {
@@ -18,10 +19,10 @@ namespace ProyectoFinal.Services
             _configuration = configuration;
         }
 
-        // Registrar nuevo usuario
+        
         public async Task<AuthResponse> RegisterAsync(RegisterRequest request)
         {
-            // Validar que las contraseñas coincidan
+            
             if (request.Password != request.ConfirmPassword)
             {
                 return new AuthResponse
@@ -31,7 +32,7 @@ namespace ProyectoFinal.Services
                 };
             }
 
-            // Validar que el email no exista
+            
             var existingUser = _context.Users.FirstOrDefault(u => u.Email == request.Email);
             if (existingUser != null)
             {
@@ -42,7 +43,7 @@ namespace ProyectoFinal.Services
                 };
             }
 
-            // Crear nuevo usuario
+            
             var user = new User
             {
                 Email = request.Email,
@@ -54,7 +55,6 @@ namespace ProyectoFinal.Services
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            // Generar token
             var token = GenerateJwtToken(user);
 
             return new AuthResponse
@@ -71,10 +71,10 @@ namespace ProyectoFinal.Services
             };
         }
 
-        // Iniciar sesión
+        
         public async Task<AuthResponse> LoginAsync(LoginRequest request)
         {
-            // Buscar usuario por email
+            
             var user = _context.Users.FirstOrDefault(u => u.Email == request.Email);
             if (user == null)
             {
@@ -85,7 +85,7 @@ namespace ProyectoFinal.Services
                 };
             }
 
-            // Verificar contraseña
+           
             if (!VerifyPassword(request.Password, user.Password))
             {
                 return new AuthResponse
@@ -95,7 +95,7 @@ namespace ProyectoFinal.Services
                 };
             }
 
-            // Generar token
+            
             var token = GenerateJwtToken(user);
 
             return new AuthResponse
@@ -112,13 +112,12 @@ namespace ProyectoFinal.Services
             };
         }
 
-        // Obtener usuario por email
         public async Task<User> GetUserByEmailAsync(string email)
         {
             return await Task.FromResult(_context.Users.FirstOrDefault(u => u.Email == email));
         }
 
-        // Hashear contraseña
+        
         private string HashPassword(string password)
         {
             using (var sha256 = SHA256.Create())
@@ -128,14 +127,46 @@ namespace ProyectoFinal.Services
             }
         }
 
-        // Verificar contraseña
+        public async Task<bool> DepositAsync(int userId, decimal amount)
+        {
+            if (amount <= 0) return false;
+            var user = await _context.Users.FindAsync(userId);
+            if (user == null) return false;
+
+            user.Balance += amount;
+
+            _context.Deposits.Add(new Deposit
+            {
+                UserId = userId,
+                Amount = amount,
+                Date = DateTime.Now
+            });
+
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<User> GetUserByIdAsync(int userId)
+        {
+            return await _context.Users.FindAsync(userId);
+        }
+
+
         private bool VerifyPassword(string password, string hash)
         {
             var hashOfInput = HashPassword(password);
             return hashOfInput == hash;
         }
 
-        // Generar JWT Token
+        public async Task<List<Deposit>> GetDepositsAsync(int userId)
+        {
+            return await _context.Deposits
+                .Where(d => d.UserId == userId)
+                .OrderByDescending(d => d.Date)
+                .ToListAsync();
+        }
+
+
         private string GenerateJwtToken(User user)
         {
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
@@ -148,7 +179,8 @@ namespace ProyectoFinal.Services
                 audience: _configuration["Jwt:Audience"] ?? "ProyectoFinalUsers",
                 claims: new[]
                 {
-                    new System.Security.Claims.Claim("sub", user.Id.ToString()),
+             
+                    new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.NameIdentifier, user.Id.ToString()),
                     new System.Security.Claims.Claim("email", user.Email),
                     new System.Security.Claims.Claim("name", user.Name)
                 },

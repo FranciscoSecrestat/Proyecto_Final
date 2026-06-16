@@ -19,7 +19,7 @@
         <div class="card">
           <h2>📈 Saldo</h2>
           <p>$ {{ totalBalance }}</p>
-          <router-link to="/portfolio" class="btn-card">Detalles</router-link>
+          <router-link to="/deposit" class="btn-card">Detalles</router-link>
         </div>
       </div>
 
@@ -85,6 +85,7 @@
 <script>
 import { getCryptoCurrencies, getUserTransactions } from '@/services/api';
 import { getUser } from '@/services/authService';
+import axios from 'axios';
 
 export default {
   data() {
@@ -113,13 +114,11 @@ export default {
         if (this.user) {
           this.transactions = await getUserTransactions(this.user.id);
 
-            const balance = this.transactions.reduce((acc, t) => {
-                if (t.action === 'purchase') return acc + t.money;
-                if (t.action === 'sale') return acc - t.money;
-                return acc;
-            }, 0);
-
-          this.totalBalance = balance.toLocaleString('es-AR');
+          const token = localStorage.getItem('token');
+          const response = await axios.get('https://localhost:7192/api/auth/balance', {
+            headers: { Authorization: `Bearer ${token}` }
+          });
+          this.totalBalance = response.data.balance.toLocaleString('es-AR');
         }
       } catch (error) {
         console.error('Error loading data:', error);

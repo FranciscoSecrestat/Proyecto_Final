@@ -81,9 +81,17 @@ export default {
     async handleRegister() {
       this.loading = true;
       this.message = '';
+      const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+      if (!passwordRegex.test(this.form.password)) {
+        this.message = 'La contraseña debe tener al menos 8 caracteres, una mayúscula y un número';
+        this.messageType = 'error';
+        this.loading = false;
+        return;
+      }
 
       try {
         const response = await register(this.form);
+        
         
         if (response.success) {
           localStorage.setItem('token', response.token);

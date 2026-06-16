@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProyectoFinal.Models;
 using ProyectoFinal.Services;
@@ -39,12 +40,16 @@ namespace ProyectoFinal.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<Transaction>> Create([FromBody] TransactionRequest request)
         {
             try
             {
-                // Por ahora el userId lo sacamos del token, simplificamos con 1
-                var userId = int.Parse(User.FindFirst("sub")?.Value ?? "1");
+                var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+                if (userIdClaim == null)
+                    return Unauthorized();
+                var userId = int.Parse(userIdClaim);
+
                 var result = await _service.CreateAsync(request, userId);
                 return CreatedAtAction(nameof(GetById), new { id = result.Id }, result);
             }

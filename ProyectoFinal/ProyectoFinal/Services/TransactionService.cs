@@ -22,6 +22,20 @@ namespace ProyectoFinal.Services
                 .OrderByDescending(t => t.TransactionDate)
                 .ToListAsync();
         }
+        private async Task<decimal> GetArsBalanceAsync(int userId)
+        {
+            var transactions = await _context.Transactions
+                .Where(t => t.UserId == userId)
+                .ToListAsync();
+
+            decimal balance = 0;
+            foreach (var t in transactions)
+            {
+                if (t.Action == "sale") balance += t.Money;
+                else if (t.Action == "purchase") balance -= t.Money;
+            }
+            return balance;
+        }
 
         public async Task<Transaction> GetByIdAsync(int id)
         {
@@ -30,21 +44,30 @@ namespace ProyectoFinal.Services
 
         public async Task<Transaction> CreateAsync(TransactionRequest request, int userId)
         {
-            // Validar cantidad mayor a 0
             if (request.CryptoAmount <= 0)
                 throw new Exception("La cantidad debe ser mayor a 0");
 
-            // Si es venta, validar que tenga suficiente
-            if (request.Action == "sale")
-            {
-                var balance = await GetCryptoBalanceAsync(userId, request.CryptoCode);
-                if (request.CryptoAmount > balance)
-                    throw new Exception($"No tenés suficiente {request.CryptoCode}. Saldo disponible: {balance}");
-            }
-
-            // Obtener precio actual desde CriptoYa
             var price = await _criptoYaService.GetPriceAsync(request.CryptoCode, request.Action);
             var money = price * request.CryptoAmount;
+
+            var user = await _context.Users.FindAsync(userId);
+
+            if (request.Action == "purchase")
+            {
+                if (money > user.Balance)
+                    throw new Exception($"Saldo insuficiente. Tu saldo es $ {user.Balance:N2} y la compra cuesta $ {money:N2}");
+
+                user.Balance -= money;
+            }
+
+            if (request.Action == "sale")
+            {
+                var cryptoBalance = await GetCryptoBalanceAsync(userId, request.CryptoCode);
+                if (request.CryptoAmount > cryptoBalance)
+                    throw new Exception($"No tenés suficiente {request.CryptoCode}. Saldo disponible: {cryptoBalance}");
+
+                user.Balance += money;
+            }
 
             var transaction = new Transaction
             {
@@ -94,7 +117,7 @@ namespace ProyectoFinal.Services
             return transaction;
         }
 
-        // Calcula cuánta cripto tiene el usuario
+      
         private async Task<decimal> GetCryptoBalanceAsync(int userId, string cryptoCode)
         {
             var transactions = await _context.Transactions
@@ -111,5 +134,6 @@ namespace ProyectoFinal.Services
             }
             return balance;
         }
+        
     }
 }

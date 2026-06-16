@@ -25,6 +25,9 @@
           <li class="nav-item" v-if="isAuthenticated">
             <button @click="logout" class="nav-link logout-btn">Cerrar Sesión</button>
           </li>
+          <li class="nav-item" v-if="isAuthenticated">
+            <router-link to="/deposit" class="nav-link">Cargar Saldo</router-link>
+          </li>
         </ul>
         <div class="hamburger" @click="mobileMenuOpen = !mobileMenuOpen">
           <span></span>
