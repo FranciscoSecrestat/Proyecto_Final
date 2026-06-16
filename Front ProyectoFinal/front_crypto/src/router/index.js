@@ -50,6 +50,12 @@ const routes = [
     name: 'Portfolio',
     component: () => import('@/views/Portfolio.vue'),
     meta: { requiresAuth: true }
+  },
+  {
+    path: '/transactions/:id',
+    name: 'TransactionDetail',
+    component: () => import('@/views/TransactionDetail.vue'),
+    meta: { requiresAuth: true }
   }
 ];
 

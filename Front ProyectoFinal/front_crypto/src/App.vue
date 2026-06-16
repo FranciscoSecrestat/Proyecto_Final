@@ -4,8 +4,20 @@
       <div class="nav-container">
         <router-link to="/" class="nav-logo">💰 CryptoApp</router-link>
         <ul class="nav-menu" :class="{ active: mobileMenuOpen }">
+          <li class="nav-item" v-if="!isAuthenticated">
+            <router-link to="/login" class="nav-link">Iniciar Sesión</router-link>
+          </li>
+          <li class="nav-item" v-if="!isAuthenticated">
+            <router-link to="/register" class="nav-link">Registrarse</router-link>
+          </li>
           <li class="nav-item" v-if="isAuthenticated">
-            <router-link to="/dashboard" class="nav-link"></router-link>
+            <router-link to="/dashboard" class="nav-link">Dashboard</router-link>
+          </li>
+          <li class="nav-item" v-if="isAuthenticated">
+            <router-link to="/transactions" class="nav-link">Transacciones</router-link>
+          </li>
+          <li class="nav-item" v-if="isAuthenticated">
+            <router-link to="/portfolio" class="nav-link">Mi Cartera</router-link>
           </li>
           <li class="nav-item" v-if="isAuthenticated">
             <span class="nav-link user-name">{{ userName }}</span>
