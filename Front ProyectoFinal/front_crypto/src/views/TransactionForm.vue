@@ -15,7 +15,7 @@
         <label>Criptomoneda:</label>
         <select v-model="form.cryptoCode">
           <option value="btc">Bitcoin (BTC)</option>
-          <option value="usdc">USDC</option>
+          <option value="usdt">USDT</option>
           <option value="eth">Ethereum (ETH)</option>
         </select>
       </div>
