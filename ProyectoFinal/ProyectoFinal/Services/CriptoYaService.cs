@@ -13,7 +13,6 @@ namespace ProyectoFinal.Services
 
         public async Task<decimal> GetPriceAsync(string cryptoCode, string action)
         {
-            // action: purchase → usamos "ask", sale → usamos "bid"
             var url = $"https://criptoya.com/api/satoshitango/{cryptoCode}/ars";
             var response = await _httpClient.GetAsync(url);
             response.EnsureSuccessStatusCode();
