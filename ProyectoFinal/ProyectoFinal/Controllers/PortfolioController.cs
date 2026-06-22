@@ -25,7 +25,6 @@ namespace ProyectoFinal.Controllers
                 .Where(t => t.UserId == userId)
                 .ToListAsync();
 
-            // Agrupar por cripto y calcular balance
             var cryptoCodes = transactions.Select(t => t.CryptoCode).Distinct();
             var portfolio = new List<object>();
             decimal total = 0;
@@ -41,7 +40,6 @@ namespace ProyectoFinal.Controllers
 
                 if (balance <= 0) continue;
 
-                // Obtener precio actual
                 var price = await _criptoYaService.GetPriceAsync(code, "sale");
                 var value = balance * price;
                 total += value;
